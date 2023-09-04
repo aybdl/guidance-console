@@ -29,8 +29,8 @@
     <widget class="QLineEdit" name="lineEdit">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>30</y>
+       <x>90</x>
+       <y>20</y>
        <width>41</width>
        <height>21</height>
       </rect>
@@ -43,8 +43,8 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>30</y>
-       <width>61</width>
+       <y>20</y>
+       <width>81</width>
        <height>16</height>
       </rect>
      </property>
@@ -56,7 +56,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>110</y>
+       <y>140</y>
        <width>141</width>
        <height>101</height>
       </rect>
@@ -77,14 +77,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>40</width>
+       <x>20</x>
+       <y>100</y>
+       <width>51</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>状态显示</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>场景初始化</string>
      </property>
     </widget>
    </widget>
@@ -138,26 +151,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
      </item>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>90</y>
        <width>80</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>软件连接</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>90</y>
-       <width>80</width>
-       <height>18</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -167,10 +167,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>160</y>
+       <x>120</x>
+       <y>120</y>
        <width>80</width>
-       <height>18</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -180,10 +180,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>120</y>
+       <x>120</x>
+       <y>90</y>
        <width>80</width>
-       <height>18</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -193,10 +193,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>20</x>
        <y>120</y>
        <width>80</width>
-       <height>18</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
