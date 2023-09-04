@@ -1,5 +1,7 @@
 #include "maincontrol.h"
 #include "ui_maincontrol.h"
+
+
 QByteArray Int2Byte(int int_data, int bits);
 int Byte2Int(QByteArray bytes);
 QByteArray Float2Byte(float data);
@@ -105,3 +107,22 @@ float Byte2Float(QByteArray byte)
     }
     return result;
 }
+
+void MainControl::on_pushButton_6_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,"Select File", "D:\\",  "Text files (*.txt)");
+    ui->lineEdit_2->setText(filename);
+
+    QFile file(filename);
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) return;
+
+    while(!file.atEnd()) {
+        QString line = file.readLine();
+        line =line.trimmed();
+        ui->plainTextEdit->appendPlainText(line);
+    }
+
+    file.close();
+
+}
+

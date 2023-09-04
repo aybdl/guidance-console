@@ -104,10 +104,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>20</y>
-      <width>231</width>
-      <height>271</height>
+      <x>210</x>
+      <y>40</y>
+      <width>401</width>
+      <height>371</height>
      </rect>
     </property>
     <property name="title">
@@ -126,36 +126,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <string>作业文件选择</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>50</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>协同探测3.txt</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>的</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>新建项目导弹</string>
-      </property>
-     </item>
-    </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>90</y>
+       <x>30</x>
+       <y>250</y>
        <width>80</width>
        <height>21</height>
       </rect>
@@ -168,7 +143,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>120</y>
+       <y>280</y>
        <width>80</width>
        <height>21</height>
       </rect>
@@ -181,7 +156,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>90</y>
+       <y>250</y>
        <width>80</width>
        <height>21</height>
       </rect>
@@ -193,14 +168,46 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>120</y>
+       <x>30</x>
+       <y>280</y>
        <width>80</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
       <string>结束仿真</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>331</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_2"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="text">
+         <string>openFile...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>331</width>
+       <height>151</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -211,7 +218,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>17</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

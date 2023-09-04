@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QUdpSocket>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainControl; }
@@ -19,6 +20,8 @@ public:
 private slots:
     void on_pushButton_clicked();
     void readyData();
+
+    void on_pushButton_6_clicked();
 
 private:
     Ui::MainControl *ui;
