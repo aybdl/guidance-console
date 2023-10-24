@@ -39,6 +39,10 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_tabWidget_currentChanged(int index);
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::MainControl *ui;
     QUdpSocket* UdpClient = nullptr;

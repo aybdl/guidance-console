@@ -1,5 +1,7 @@
 #include "maincontrol.h"
 #include "ui_maincontrol.h"
+#include "calculate_effectiveness.h"
+#include<iostream>
 
 
 QByteArray Int2Byte(int int_data, int bits);
@@ -463,16 +465,19 @@ QByteArray Long2Byte(qint64 data)
 
 
 
+void MainControl::on_tabWidget_currentChanged(int index)
+{
+
+}
 
 
+void MainControl::on_pushButton_9_clicked()
+{
+    float effectiveness = get_effectiveness();
+    std::cout<<effectiveness<<std::endl;
+    QString out = QString::number(effectiveness);
+    //QString out = "hello";
+    ui->lineEdit_3->setText(out);
 
-
-
-
-
-
-
-
-
-
+}
 
