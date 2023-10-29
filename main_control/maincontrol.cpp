@@ -241,27 +241,145 @@ void MainControl::on_pushButton_16_clicked()
     //QTextStream txtOutput(file);
     txtOutput<<senddata<<Qt::endl;
 }
+//收数据然后解析
 void MainControl::readyData()
 {
-    QByteArray arr,command,data,linedata;
+    QByteArray arr,command,data;
+    QByteArray senddata;
     //float testread;
     int datalen;
     //QStringList datalist;
 
     arr.resize(UdpServer->bytesAvailable());
     UdpServer->readDatagram(arr.data(),arr.size());
-    command = arr.sliced(8,2);
-    datalen=arr.sliced(10,2).toInt();
-    data=arr.sliced(12,datalen);
-    QList<QByteArray> lines = data.split(',');
-    for(int i=0;i<lines.size();i++){
-        linedata= lines[i];
-        if (linedata[0]=='T'){
-            QList<QByteArray> state = linedata.split('|');
-            for(int j=0;j<state.size();j++){
+    command = arr.sliced(8,2);//指令
+    datalen=arr.sliced(10,2).toInt();//数据长度
+    data=arr.sliced(12,datalen);//数据
+    //仿真数据
+    if (command[1]==0x03){
+        //消失
+        if (data[0]=='-'){
+            qint64 timexx=(qint64)1697884820309;
+            senddata.append(Long2Byte(timexx));
+            senddata.append(char(data.sliced(1).toInt()));//平台ID
+            senddata.append(char(0));//平台类型
+            senddata.append(char(1));//报文类型
+            senddata.append(Long2Byte(timexx));
+            senddata.append(Double2Byte(0));//经度
+            senddata.append(Double2Byte(0));//纬度
+            senddata.append(Float2Byte(0));//高度
+            senddata.append(Float2Byte(0));//航向角
+            senddata.append(Float2Byte(0));//滚转角
+            senddata.append(Float2Byte(0));//俯仰角
+            senddata.append(Float2Byte(0));//速度
+            senddata.append(Short2Byte(0));//0正常1爆炸
+            senddata.append(Short2Byte(1));//0正常1消失
+            senddata.append(Short2Byte(0));//保留位
+            senddata.append(Short2Byte(0));//保留位
+        }
+        else{
+            QList<QByteArray> lines = data.split(',');
+            qint64 timexx=(qint64)1697884820309;
+            senddata.append(Long2Byte(timexx));
+            senddata.append(lines[0]);//平台ID
+            senddata.append(char(0));//平台类型
+            senddata.append(char(1));//报文类型
+            senddata.append(Long2Byte(timexx));
+            //senddata.append(Long2Byte(lines[0].toInt()));
+            QList<QByteArray> frametype = lines[1].split('=');//数据描述的信息类型
+            //位置信息
+            if(frametype[1]=="UnitPosition"){
+                QList<QByteArray> state = lines[3].split('|');//运动数据
+                senddata.append(Double2Byte(state[0].toDouble()));//经度
+                senddata.append(Double2Byte(state[1].toDouble()));//纬度
+                senddata.append(Float2Byte(state[2].toFloat()));//高度
+                senddata.append(Float2Byte(state[5].toFloat()));//航向角
+                senddata.append(Float2Byte(state[3].toFloat()));//滚转角
+                senddata.append(Float2Byte(state[4].toFloat()));//俯仰角
+                senddata.append(Float2Byte(0.0));//速度
+                senddata.append(Short2Byte(0.0));//0正常1爆炸
+                senddata.append(Short2Byte(0.0));//0正常1消失
+                senddata.append(Short2Byte(0.0));//保留位
+                senddata.append(Short2Byte(0.0));//保留位
+            }
+            //武器发射
+            else if(frametype[1]=="WeaponFired"){
+                QList<QByteArray> state = lines[2].split('|');//运动数据
+                senddata.append(Double2Byte(state[0].toDouble()));//经度
+                senddata.append(Double2Byte(state[1].toDouble()));//纬度
+                senddata.append(Float2Byte(state[2].toFloat()));//高度
+                senddata.append(Float2Byte(0.0));//航向角
+                senddata.append(Float2Byte(0.0));//滚转角
+                senddata.append(Float2Byte(0.0));//俯仰角
+                senddata.append(Float2Byte(0.0));//速度
+                senddata.append(Short2Byte(0.0));//0正常1爆炸
+                senddata.append(Short2Byte(0.0));//0正常1消失
+                senddata.append(Short2Byte(0.0));//保留位
+                senddata.append(Short2Byte(0.0));//保留位
+            }
+            //武器爆炸
+            else if(frametype[1]=="WeaponFired"){
+                QList<QByteArray> state = lines[2].split('|');//运动数据
+                senddata.append(Double2Byte(state[0].toDouble()));//经度
+                senddata.append(Double2Byte(state[1].toDouble()));//纬度
+                senddata.append(Float2Byte(state[2].toFloat()));//高度
+                senddata.append(Float2Byte(0.0));//航向角
+                senddata.append(Float2Byte(0.0));//滚转角
+                senddata.append(Float2Byte(0.0));//俯仰角
+                senddata.append(Float2Byte(0.0));//速度
+                senddata.append(Short2Byte(1));//0正常1爆炸
+                senddata.append(Short2Byte(0.0));//0正常1消失
+                senddata.append(Short2Byte(0.0));//保留位
+                senddata.append(Short2Byte(0.0));//保留位
+            }
+            //探测数据
+            else if(frametype[1]=="Sensor"){
+                senddata.clear();
+                int s1=1;//传感器类型
+                int s2=0;//传感器ID
+                int s3=0;//所属平台ID
+                float s4=30;//水平开角
+                float s5=15;//垂直开角
+                float s6=0;//探测距离
+                float s7=0;//方向角度
+                float s8=0;//纵向角度
+                float s9=0;//横向角度
+                float s10=0;//平台X轴向偏移量
+                float s11=0;//平台Y轴向偏移量
+                float s12=0;//平台Z轴向偏移量
+                int s13=0;//是否有动画
+                int s14=0;//是否限制到水面以下
+                int s15=150;//颜色值R
+                int s16=150;//颜色值G
+                int s17=150;//颜色值B
+                int s18=10;//颜色值透明度
+                s2=lines[0].toInt();
+                s3=lines[4].toInt();
+                s6=lines[3].toFloat();
+                s1=lines[5].toInt();
+                senddata.append(Int2Byte(s1,4));
+                senddata.append(Int2Byte(s2,4));
+                senddata.append(Int2Byte(s3,4));
+                senddata.append(Float2Byte(s4));
+                senddata.append(Float2Byte(s5));
+                senddata.append(Float2Byte(s6));
+                senddata.append(Float2Byte(s7));
+                senddata.append(Float2Byte(s8));
+                senddata.append(Float2Byte(s9));
+                senddata.append(Float2Byte(s10));
+                senddata.append(Float2Byte(s11));
+                senddata.append(Float2Byte(s12));
+                senddata.append(Int2Byte(s13,4));
+                senddata.append(Int2Byte(s14,4));
+                senddata.append(Int2Byte(s15,4));
+                senddata.append(Int2Byte(s16,4));
+                senddata.append(Int2Byte(s17,4));
+                senddata.append(Int2Byte(s18,4));
 
             }
-            }
+        }
+
+
     }
     //testread=Byte2Float(tem);
     //ui->textBrowser->append(QString::number(testread,'f',3));
@@ -271,6 +389,7 @@ void MainControl::readyData()
     //ui->plainTextEdit_2->appendPlainText(QString::number(testread,'f',3));
     //ui->plainTextEdit_2->appendPlainText(arr);
     //saveTextByIODevice(newfilepath);//在D:/Desktop/文件夹创建一个文本文档text.txt用于保存UDP通信数据
+    UdpClient->writeDatagram(senddata,QHostAddress(ui->lineEdit_6->text()),ui->lineEdit->text().toInt());//发送数据
 }
 
 //读取文件
@@ -337,12 +456,12 @@ void MainControl::timerupdate()
             senddata.append(Long2Byte(timexx));
             for (int j = 0; j < 11; j++){
                 if(j==0){
-                    senddata.append(Double2Byte(119.5));
-                    //senddata.append(Double2Byte(lineList[i*11+j].toDouble()/200+119.5));
+                    //senddata.append(Double2Byte(119.5));
+                    senddata.append(Double2Byte(lineList[i*11+j].toDouble()/200+119.5));
                 }
                 else if(j==1){
-                    senddata.append(Double2Byte(20.5));
-                    //senddata.append(Double2Byte(lineList[i*11+j].toDouble()/200+20.5));
+                    //senddata.append(Double2Byte(20.5));
+                    senddata.append(Double2Byte(lineList[i*11+j].toDouble()/200+20.5));
                 }
                 else if(j<7){
                     senddata.append(Float2Byte(lineList[i*11+j].toFloat()));
