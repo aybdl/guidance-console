@@ -9,4 +9,11 @@ std::vector<std::vector<float>> matrix_mutiplicate(std::vector<std::vector<float
 float get_effectiveness();
 
 
+std::vector<std::vector<float>> get_availibility();
+std::vector<std::vector<float>> get_credibility_matrix();
+double calculate_combination(const std::vector<float>& failure_probabilities, const std::vector<int>& combination);
+std::vector<std::vector<int>> generate_combinations(int n);
+std::vector<float> calculate_fault_probabilities(const std::vector<float>& failure_probabilities);
+int nchoosek(int n, int k);
+
 #endif // CALCULATE_EFFECTIVENESS_H

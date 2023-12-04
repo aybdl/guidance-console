@@ -706,8 +706,6 @@ void MainControl::on_pushButton_5_clicked()
 
 
 
-
-
 //四个处理转换函数
 QByteArray Int2Byte(int int_data, int bits)
 {
@@ -799,7 +797,7 @@ QByteArray Long2Byte(qint64 data)
 
 
 
-
+// 输出效能值
 void MainControl::on_pushButton_9_clicked()
 {
     float effectiveness = get_effectiveness();

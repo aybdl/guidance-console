@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // C:/guidance-console-main/build-main_control-Desktop_Qt_6_5_3_MinGW_64_bit-Debug/debug/main_control_zh_CN.qm
+  // G:/guidance-console/build-main_control-Desktop_Qt_6_5_3_MinGW_64_bit-Debug/debug/main_control_zh_CN.qm
   0x0,0x0,0x0,0x1a,
   0x3c,
   0xb8,0x64,0x18,0xca,0xef,0x9c,0x95,0xcd,0x21,0x1c,0xbf,0x60,0xa1,0xbd,0xdd,0xa7,
