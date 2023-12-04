@@ -18,12 +18,15 @@ class MainControl : public QMainWindow
 public:
     MainControl(QWidget *parent = nullptr);
     ~MainControl();
-    QTimer *timSend;
+
 
 private slots:
+
     void on_pushButton_clicked();
     void readyData();
     void timerupdate();
+    void timerupdate1();
+    //void handleTimeout();
 
     void on_pushButton_6_clicked();
 
@@ -38,6 +41,12 @@ private slots:
     void on_pushButton_4_clicked();
 
     void on_pushButton_5_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_10_clicked();
 
 private:
     Ui::MainControl *ui;

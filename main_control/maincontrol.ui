@@ -15,9 +15,12 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>60</x>
       <y>60</y>
       <width>541</width>
       <height>401</height>
@@ -30,7 +33,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tabWidgetPage1">
      <attribute name="title">
@@ -144,7 +147,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>119</string>
+       <string>116.8</string>
       </property>
      </widget>
      <widget class="QTextEdit" name="textEdit">
@@ -281,7 +284,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="text">
-       <string>21</string>
+       <string>22.6</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_12">
@@ -359,7 +362,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="text">
-       <string>120</string>
+       <string>117.1</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_15">
@@ -437,7 +440,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="text">
-       <string>20</string>
+       <string>22.2</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_18">
@@ -489,7 +492,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="text">
-       <string>2000</string>
+       <string>20000</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_43">
@@ -554,7 +557,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="text">
-       <string>1</string>
+       <string>0.6</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_45">
@@ -587,6 +590,36 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <item>
        <property name="text">
         <string>1-大范围标准沙盘</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
        </property>
       </item>
      </widget>
@@ -722,7 +755,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="text">
-       <string>1</string>
+       <string>0</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_51">
@@ -853,159 +886,209 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <item>
        <property name="text">
-        <string>0-001型航母</string>
+        <string>0</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>1-大范围标准沙盘</string>
+        <string>1</string>
        </property>
       </item>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tabWidgetPage2">
-     <attribute name="title">
-      <string>运动状态</string>
-     </attribute>
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>40</y>
-        <width>491</width>
-        <height>311</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>仿真控制</string>
-      </property>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>81</width>
-         <height>16</height>
-        </rect>
-       </property>
+      <item>
        <property name="text">
-        <string>作业文件选择</string>
+        <string>2</string>
        </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>200</y>
-         <width>80</width>
-         <height>21</height>
-        </rect>
-       </property>
+      </item>
+      <item>
        <property name="text">
-        <string>开始仿真</string>
+        <string>3</string>
        </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="geometry">
-        <rect>
-         <x>130</x>
-         <y>200</y>
-         <width>80</width>
-         <height>21</height>
-        </rect>
-       </property>
+      </item>
+      <item>
        <property name="text">
-        <string>暂停/继续</string>
+        <string>4</string>
        </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_5">
-       <property name="geometry">
-        <rect>
-         <x>240</x>
-         <y>200</y>
-         <width>80</width>
-         <height>21</height>
-        </rect>
-       </property>
+      </item>
+      <item>
        <property name="text">
-        <string>结束仿真</string>
+        <string>5</string>
        </property>
-      </widget>
-      <widget class="QPlainTextEdit" name="plainTextEdit">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>90</y>
-         <width>441</width>
-         <height>91</height>
-        </rect>
-       </property>
-       <property name="lineWrapMode">
-        <enum>QPlainTextEdit::NoWrap</enum>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>51</y>
-         <width>301</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_6">
-       <property name="geometry">
-        <rect>
-         <x>350</x>
-         <y>49</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
+      </item>
+      <item>
        <property name="text">
-        <string>openFile...</string>
+        <string>6</string>
        </property>
-      </widget>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>41</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>发送间隔：</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_40">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>10</y>
-        <width>31</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>1000</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>10</y>
-        <width>21</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>ms</string>
-      </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>23</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>24</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>25</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>26</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>27</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>28</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>29</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>31</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>33</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>34</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>35</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>36</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>37</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>38</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>39</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>40</string>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
@@ -1015,9 +1098,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_56">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>210</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1028,9 +1111,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_57">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>90</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1041,9 +1124,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_58">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>150</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1080,9 +1163,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_59">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>240</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1106,9 +1189,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_60">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>60</y>
-        <width>51</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1132,9 +1215,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_61">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>180</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1158,9 +1241,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_62">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>120</y>
-        <width>51</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1223,9 +1306,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_87">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>300</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1236,9 +1319,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_88">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>270</y>
-        <width>41</width>
+        <width>71</width>
         <height>20</height>
        </rect>
       </property>
@@ -1288,9 +1371,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_89">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>270</x>
         <y>120</y>
-        <width>71</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1327,9 +1410,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_90">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>270</x>
         <y>60</y>
-        <width>71</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1379,9 +1462,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_91">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>270</x>
         <y>240</y>
-        <width>41</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1392,9 +1475,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_92">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>270</x>
         <y>300</y>
-        <width>61</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1405,9 +1488,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_93">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>270</x>
         <y>210</y>
-        <width>41</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1418,9 +1501,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_94">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>270</x>
         <y>90</y>
-        <width>71</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1431,9 +1514,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_95">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>270</x>
         <y>180</y>
-        <width>91</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1444,9 +1527,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_96">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>270</x>
         <y>150</y>
-        <width>51</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1470,9 +1553,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_97">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>270</x>
         <y>270</y>
-        <width>41</width>
+        <width>111</width>
         <height>20</height>
        </rect>
       </property>
@@ -1668,11 +1751,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>标绘</string>
-     </attribute>
-    </widget>
     <widget class="QWidget" name="tabWidgetPage3">
      <attribute name="title">
       <string>数据显示</string>
@@ -1817,6 +1895,242 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>效能评估</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>计算效能值</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>30</y>
+        <width>53</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>效能值：</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabWidgetPage2">
+     <attribute name="title">
+      <string>回放</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>491</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>回放控制</string>
+      </property>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>作业文件选择</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>200</y>
+         <width>80</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始回放</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>200</y>
+         <width>80</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>暂停/继续</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>200</y>
+         <width>80</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>结束回放</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>441</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="lineWrapMode">
+        <enum>QPlainTextEdit::NoWrap</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>51</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>49</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>openFile...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>200</y>
+         <width>80</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>保存数据</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>240</y>
+         <width>80</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>加载实体</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>回放速度：</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_5">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>64</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>128</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -1841,7 +2155,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </rect>
     </property>
     <property name="text">
-     <string>8001</string>
+     <string>9950</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -1867,7 +2181,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </rect>
     </property>
     <property name="text">
-     <string>127.0.0.1</string>
+     <string>169.254.153.49</string>
     </property>
    </widget>
   </widget>
